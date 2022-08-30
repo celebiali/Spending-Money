@@ -5,14 +5,19 @@ import BasketItem from "../BasketItem/BasketItem";
 function Basket({basket,resetBasket,total,products}){
     return(
         <>
-         {basket.map(item => (
-            <BasketItem item={item} product={products.find(p => p.id === item.id)}/>
+            <div className="basket-container container">
+                <h3>Alışveriş Detayları</h3>
+            <ul>
+                {basket.map(item => (
+            <BasketItem key={item.id} item={item} product={products.find(p => p.id === item.id)}/>
             ))
          }
-                <div>
+            </ul>
+                <div className="total">
                     Toplam: ${total}
                 </div>
-            <button onClick={resetBasket}>Reset</button>
+            <button className="basket-reset" onClick={resetBasket}>Reset</button>
+            </div>
         </>
     )
 }

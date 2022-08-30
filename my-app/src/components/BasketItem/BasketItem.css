@@ -1,6 +1,9 @@
 .basket-item {
-  display: flex;
-  flex-direction: column;
+  padding-bottom: 10px;
+  font-size: 17px;
+}
+.basket-item span {
+  color: #999;
 }
 
 /*# sourceMappingURL=BasketItem.css.map */

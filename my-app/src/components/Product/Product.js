@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import "./Product.css"
+import {moneyFormat} from "../../helpers";
 
 function Product({product,total,money,basket,setBasket}){
 
@@ -33,12 +34,13 @@ function Product({product,total,money,basket,setBasket}){
     return(
         <>
             <div className="product">
+                <img src={product.image} alt=""/>
                 <h3>{product.title}</h3>
                 <div className="price">${product.price}</div>
                 <div className="actions">
-                    <button disabled={!basketItem} onClick={removeBasket}>-</button>
+                    <button className="sell-btn" disabled={!basketItem} onClick={removeBasket}>Sell</button>
                     <span className="amount">{basketItem && basketItem.amount || 0}</span>
-                    <button disabled={total + product.price > money} onClick={addBasket}>+</button>
+                    <button className="buy-btn" disabled={total + product.price > money} onClick={addBasket}>Buy</button>
                 </div>
             </div>
         </>

@@ -1,19 +1,18 @@
 import {useState} from "react";
-
+import {moneyFormat} from "../../helpers";
+import "./Header.scss"
 function Header({total,money}) {
     return(
         <>
-        <div>
             {total > 0 && money - total !== 0 && (
-                <div>Harcayacak {money - total}$ paranız kaldı!</div>
+                <div className="header">Harcayacak $ <span>{moneyFormat(money - total)}</span> paranız kaldı!</div>
             )}
             {total === 0 && (
-                <div>Harcamak için {money} $ paranız var!</div>
+                <div className="header">Harcamak için $ <span>{moneyFormat(money)}</span>  paranız var!</div>
             )}
             {money - total === 0 && (
-                <div>Paran bitti!</div>
+                <div className="header">Paran bitti!</div>
             )}
-        </div>
         </>
     )
 }
