@@ -1,6 +1,6 @@
 import {useState} from "react";
 import "./Basket.css"
-import BasketItem from "../BasketItem/BasketItem";
+import BasketItem from "./BasketItem";
 
 function Basket({basket,resetBasket,total,products}){
     return(

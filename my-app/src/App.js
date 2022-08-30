@@ -1,9 +1,9 @@
 import './App.css';
 import {useState, useEffect} from "react";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 import products from './products.json'
 import Product from "./components/Product/Product";
-import Basket from "./components/Basket/Basket";
+import Basket from "./components/Basket";
 
 
 function App() {

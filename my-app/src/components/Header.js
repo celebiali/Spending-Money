@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {moneyFormat} from "../../helpers";
+import {moneyFormat} from "../helpers";
 import "./Header.scss"
 function Header({total,money}) {
     return(
